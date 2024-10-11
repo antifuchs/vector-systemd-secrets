@@ -54,6 +54,10 @@
             };
           };
 
+          overlayAttrs = {
+            inherit (config.packages) vector-systemd-secrets;
+          };
+
           devshells.default = {
             imports = [
               "${inputs.devshell}/extra/language/rust.nix"
